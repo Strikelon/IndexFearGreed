@@ -55,4 +55,7 @@ dependencies {
     implementation 'android.arch.navigation:navigation-fragment-ktx:1.0.0'
     implementation 'android.arch.navigation:navigation-runtime-ktx:1.0.0'
     implementation 'android.arch.navigation:navigation-ui-ktx:1.0.0'
+
+    implementation 'org.kodein.di:kodein-di-generic-jvm:6.2.0'
+    implementation 'org.kodein.di:kodein-di-framework-android-x:6.2.0'
 }
