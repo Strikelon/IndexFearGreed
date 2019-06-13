@@ -1,4 +1,4 @@
-package com.strikalov.indexfeargreed.view
+package com.strikalov.indexfeargreed.view.activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -6,15 +6,22 @@ import android.support.annotation.IdRes
 import android.util.Log
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.arellomobile.mvp.MvpAppCompatActivity
+import com.arellomobile.mvp.presenter.InjectPresenter
 import com.strikalov.indexfeargreed.R
+import com.strikalov.indexfeargreed.presenter.MainPresenter
+import com.strikalov.indexfeargreed.view.MainView
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : MvpAppCompatActivity(), MainView {
 
     companion object {
         private const val TAG_LOG = "MainActivityLog"
     }
+
+    @InjectPresenter
+    lateinit var mainPresenter : MainPresenter
 
     private lateinit var navController: NavController
 
@@ -27,19 +34,19 @@ class MainActivity : AppCompatActivity() {
 
         bottom_navigation.setOnNavigationItemSelectedListener {
             when(it.itemId){
-                R.id.index_fragment_menu_item -> {
+                R.id.indexFragment -> {
                     Log.i(TAG_LOG, "index_fragment")
-                    navigate(R.id.indexFragment)
+                    mainPresenter.onNavigationItemSelected(R.id.indexFragment)
                     return@setOnNavigationItemSelectedListener true
                 }
-                R.id.chart_fragment_menu_item -> {
+                R.id.chartFragment -> {
                     Log.i(TAG_LOG, "chart_fragment")
-                    navigate(R.id.chartFragment)
+                    mainPresenter.onNavigationItemSelected(R.id.chartFragment)
                     return@setOnNavigationItemSelectedListener true
                 }
-                R.id.info_fragment_menu_item -> {
+                R.id.infoFragment -> {
                     Log.i(TAG_LOG, "info_fragment")
-                    navigate(R.id.infoFragment)
+                    mainPresenter.onNavigationItemSelected(R.id.infoFragment)
                     return@setOnNavigationItemSelectedListener true
                 }
                 else -> return@setOnNavigationItemSelectedListener false
@@ -48,7 +55,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun navigate(@IdRes destinationId: Int){
+    override fun navigate(destinationId: Int) {
         navController.navigate(destinationId)
     }
 }

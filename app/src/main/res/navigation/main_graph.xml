@@ -4,10 +4,10 @@
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main_graph"
             app:startDestination="@id/indexFragment">
 
-    <fragment android:id="@+id/indexFragment" android:name="com.strikalov.indexfeargreed.view.IndexFragment"
+    <fragment android:id="@+id/indexFragment" android:name="com.strikalov.indexfeargreed.view.fragments.IndexFragment"
               android:label="fragment_index" tools:layout="@layout/fragment_index"/>
-    <fragment android:id="@+id/chartFragment" android:name="com.strikalov.indexfeargreed.view.ChartFragment"
+    <fragment android:id="@+id/chartFragment" android:name="com.strikalov.indexfeargreed.view.fragments.ChartFragment"
               android:label="fragment_chart" tools:layout="@layout/fragment_chart"/>
-    <fragment android:id="@+id/infoFragment" android:name="com.strikalov.indexfeargreed.view.InfoFragment"
+    <fragment android:id="@+id/infoFragment" android:name="com.strikalov.indexfeargreed.view.fragments.InfoFragment"
               android:label="fragment_info" tools:layout="@layout/fragment_info"/>
 </navigation>
