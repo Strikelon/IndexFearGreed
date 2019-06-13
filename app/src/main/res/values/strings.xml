@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">FearGreedIndex</string>
+    <string name="app_name">Bitcoin Fear and Greed Index</string>
+    <string name="info_fragment_label">About App</string>
+    <string name="index_fragment_label">Show Index</string>
+    <string name="chart_fragment_label">Show Chart</string>
+
 </resources>
