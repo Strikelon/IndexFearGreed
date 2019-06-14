@@ -8,10 +8,13 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.arellomobile.mvp.MvpAppCompatActivity
 import com.arellomobile.mvp.presenter.InjectPresenter
+import com.arellomobile.mvp.presenter.ProvidePresenter
+import com.strikalov.indexfeargreed.App
 import com.strikalov.indexfeargreed.R
 import com.strikalov.indexfeargreed.presenter.MainPresenter
 import com.strikalov.indexfeargreed.view.MainView
 import kotlinx.android.synthetic.main.activity_main.*
+import javax.inject.Inject
 
 
 class MainActivity : MvpAppCompatActivity(), MainView {
@@ -20,8 +23,16 @@ class MainActivity : MvpAppCompatActivity(), MainView {
         private const val TAG_LOG = "MainActivityLog"
     }
 
+    @Inject
     @InjectPresenter
     lateinit var mainPresenter : MainPresenter
+
+    @ProvidePresenter
+    fun providePresenter() = mainPresenter
+
+    init {
+        App.getAppComponent().injectMainActivity(this)
+    }
 
     private lateinit var navController: NavController
 

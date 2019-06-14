@@ -3,10 +3,13 @@ package com.strikalov.indexfeargreed.presenter
 import android.util.Log
 import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
+import com.strikalov.indexfeargreed.model.interactors.FearGreedIndexInteractor
 import com.strikalov.indexfeargreed.view.ChartFragmentView
+import javax.inject.Inject
 
 @InjectViewState
-class ChartFragmentPresenter : MvpPresenter<ChartFragmentView>(){
+class ChartFragmentPresenter @Inject constructor(
+    val fearGreedIndexInteractor: FearGreedIndexInteractor): MvpPresenter<ChartFragmentView>(){
 
     companion object {
         private const val TAG_LOG = "ChartFragmentPresenter"

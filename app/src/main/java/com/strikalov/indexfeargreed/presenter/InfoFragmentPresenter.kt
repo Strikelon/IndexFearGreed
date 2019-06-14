@@ -3,8 +3,9 @@ package com.strikalov.indexfeargreed.presenter
 import android.util.Log
 import com.arellomobile.mvp.MvpPresenter
 import com.strikalov.indexfeargreed.view.InfoFragmentView
+import javax.inject.Inject
 
-class InfoFragmentPresenter : MvpPresenter<InfoFragmentView>() {
+class InfoFragmentPresenter @Inject constructor(): MvpPresenter<InfoFragmentView>() {
 
     companion object {
         private const val TAG_LOG = "InfoFragmentPresenter"
