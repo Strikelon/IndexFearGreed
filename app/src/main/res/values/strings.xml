@@ -1,7 +1,17 @@
 <resources>
     <string name="app_name">Bitcoin Fear&amp;Greed Index</string>
+
+    <!--BottomNavigationView-->
     <string name="info_fragment_label">About App</string>
     <string name="index_fragment_label">Show Index</string>
     <string name="chart_fragment_label">Show Chart</string>
+
+    <!--IndexFragment-->
+    <string name="now">"Now : "</string>
+    <string name="swipe_down_to_refresh">Swipe down to refresh</string>
+    <string name="fear">Fear</string>
+    <string name="greed">Greed</string>
+    <string name="neutral">Neutral</string>
+    <string name="no_network_connection">No Network connection</string>
 
 </resources>

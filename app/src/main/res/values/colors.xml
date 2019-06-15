@@ -8,4 +8,6 @@
     <color name="colorYellowGreen">#CCDA46</color>
     <color name="colorGreen">#81B632</color>
     <color name="arrowColor">#494D49</color>
+
+    <color name="lightGrayTextColor">#7E807E</color>
 </resources>

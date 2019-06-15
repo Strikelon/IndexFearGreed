@@ -15,5 +15,5 @@ data class FearGreedIndex(
 
     @Expose
     @SerializedName("timestamp")
-    val timestamp: String
+    val timestamp: Long
 )

@@ -42,7 +42,7 @@ class CustomView(context: Context, attrs: AttributeSet): View(context, attrs) {
     private var arrowWidth: Float = DEFAULT_ARROW_WIDTH
     private var fontSize: Float = DEFAULT_FONT_SIZE
 
-    private var indexFearGreedValue: Int = DEFAULT_INDEX_FEAR_GREED_VALUE
+    var indexFearGreedValue: Int = DEFAULT_INDEX_FEAR_GREED_VALUE
         set(value){
             field = value
             invalidate()

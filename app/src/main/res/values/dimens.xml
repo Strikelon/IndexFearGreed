@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--CustomView dimens-->
+    <dimen name="custom_view_layout_width">350dp</dimen>
+    <dimen name="custom_view_layout_height">180dp</dimen>
+    <dimen name="custom_view_arcWidth">15dp</dimen>
+    <dimen name="custom_view_arrowLength">140dp</dimen>
+    <dimen name="custom_view_arrowWidth">4dp</dimen>
+    <dimen name="custom_view_fontSize">18sp</dimen>
+
+    <!--Text in IndexFragment-->
+    <dimen name="index_fragment_text_size">24sp</dimen>
+    <dimen name="index_fragment_text_layout_margin_top">16dp</dimen>
+</resources>
