@@ -46,6 +46,8 @@ class IndexFragment : MvpAppCompatFragment(), IndexFragmentView, SwipeRefreshLay
         App.getAppComponent().injectIndexFragment(this)
     }
 
+    private val animatorSet = AnimatorSet()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -62,14 +64,14 @@ class IndexFragment : MvpAppCompatFragment(), IndexFragmentView, SwipeRefreshLay
         rootView.swipe_container.setOnRefreshListener(this)
 
         rootView.custom_view.setOnClickListener {
-            indexFragmentPresenter.onClickRefreshFearGreedIndex()
+            indexFragmentPresenter.onClickRefreshFearGreedIndex(animatorSet.isRunning)
         }
 
         return rootView
     }
 
     override fun onRefresh() {
-        indexFragmentPresenter.onSwipeRefreshFearGreedIndex()
+        indexFragmentPresenter.onSwipeRefreshFearGreedIndex(animatorSet.isRunning)
     }
 
     override fun swipeRefreshShow() {
@@ -157,8 +159,6 @@ class IndexFragment : MvpAppCompatFragment(), IndexFragmentView, SwipeRefreshLay
 
         })
 
-
-        val animatorSet = AnimatorSet()
         animatorSet
             .play(animatorFirst)
             .before(animatorSecond)

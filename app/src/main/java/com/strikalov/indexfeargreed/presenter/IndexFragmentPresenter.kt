@@ -32,13 +32,19 @@ class IndexFragmentPresenter @Inject constructor(
 
     private var disposable: Disposable? = null
 
-    fun onSwipeRefreshFearGreedIndex(){
-        viewState.isOnline()
+    fun onSwipeRefreshFearGreedIndex(isAnimatorRunning: Boolean){
+        if(!isAnimatorRunning) {
+            viewState.isOnline()
+        }else{
+            viewState.swipeRefreshHide()
+        }
     }
 
-    fun onClickRefreshFearGreedIndex(){
-        viewState.swipeRefreshShow()
-        viewState.isOnline()
+    fun onClickRefreshFearGreedIndex(isAnimatorRunning: Boolean){
+        if(!isAnimatorRunning) {
+            viewState.swipeRefreshShow()
+            viewState.isOnline()
+        }
     }
 
     fun networkIsConnected(){
