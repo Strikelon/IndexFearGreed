@@ -7,9 +7,11 @@ import com.arellomobile.mvp.MvpPresenter
 import com.strikalov.indexfeargreed.model.interactors.FearGreedIndexInteractor
 import com.strikalov.indexfeargreed.view.MainView
 import javax.inject.Inject
+import javax.inject.Singleton
 
 
 @InjectViewState
+@Singleton
 class MainPresenter @Inject constructor(
     val fearGreedIndexInteractor: FearGreedIndexInteractor) : MvpPresenter<MainView>(){
 

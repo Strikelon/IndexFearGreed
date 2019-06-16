@@ -6,8 +6,10 @@ import com.arellomobile.mvp.MvpPresenter
 import com.strikalov.indexfeargreed.model.interactors.FearGreedIndexInteractor
 import com.strikalov.indexfeargreed.view.ChartFragmentView
 import javax.inject.Inject
+import javax.inject.Singleton
 
 @InjectViewState
+@Singleton
 class ChartFragmentPresenter @Inject constructor(
     val fearGreedIndexInteractor: FearGreedIndexInteractor): MvpPresenter<ChartFragmentView>(){
 

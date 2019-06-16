@@ -12,4 +12,7 @@
     <!--Text in IndexFragment-->
     <dimen name="index_fragment_text_size">24sp</dimen>
     <dimen name="index_fragment_text_layout_margin_top">16dp</dimen>
+
+    <!--Text in InfoFragment-->
+    <dimen name="fragment_info_text_layout_margin">24dp</dimen>
 </resources>
