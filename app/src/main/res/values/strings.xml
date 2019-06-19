@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bitcoin Fear&amp;Greed Index</string>
+    <string name="app_name">Crypto Fear&amp;Greed Index</string>
 
     <!--BottomNavigationView-->
     <string name="info_fragment_label">About App</string>

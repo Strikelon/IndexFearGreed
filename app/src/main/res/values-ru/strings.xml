@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Crypto Fear&amp;Greed Index</string>
+
+    <!--BottomNavigationView-->
+    <string name="info_fragment_label">О приложении</string>
+    <string name="index_fragment_label">Индекс</string>
+    <string name="chart_fragment_label">График</string>
+
+    <!--IndexFragment-->
+    <string name="now">"Сейчас : "</string>
+    <string name="swipe_down_to_refresh">Кликните на картинку</string>
+    <string name="fear">Страх</string>
+    <string name="greed">Жадность</string>
+    <string name="neutral">Нейтрально</string>
+    <string name="no_network_connection">Нет сетевого подключения</string>
+
+    <!--InfoFragment-->
+    <string name="info_about_app">
+        Значения Fear&amp;Greed index предоставлены сервисом \n https://alternative.me/crypto/fear-and-greed-index \n\n
+        Данный сервис собирает и анализирует данные из различных источников и сводит к простому значению:
+        The Fear&amp;Greed Index для Биткоина и других крупных криптовалют.\n\n
+        * Информация, предоставленная данным приложением, не является инвестиционным советом, финансовым советом,
+        торговым советом, или советом какого-либо другого рода. Мы не рекомендуем покупать, продавать или хранить любую криптовалюту.
+        Проводите собственную экспертизу и проконсультируйтесь со своим финансовым консультантом, прежде чем принимать какие-либо инвестиционные решения.
+    </string>
+
+    <!--ChartFragment-->
+    <string name="scalable_chart_description">Масштабируемый график за последние 30 дней</string>
+    <string name="no_network_connection_message">Проверьте сетевое подключение и обновите</string>
+
+</resources>
