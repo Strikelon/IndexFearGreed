@@ -12,8 +12,7 @@ import javax.inject.Singleton
 
 @InjectViewState
 @Singleton
-class MainPresenter @Inject constructor(
-    val fearGreedIndexInteractor: FearGreedIndexInteractor) : MvpPresenter<MainView>(){
+class MainPresenter @Inject constructor() : MvpPresenter<MainView>(){
 
     companion object {
         private const val TAG_LOG = "MainPresenterLog"
