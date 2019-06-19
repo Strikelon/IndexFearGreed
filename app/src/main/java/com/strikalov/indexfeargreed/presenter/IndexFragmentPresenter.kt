@@ -75,6 +75,7 @@ class IndexFragmentPresenter @Inject constructor(
                 },
                 {
                     Log.i(TAG_LOG, it.toString())
+                    networkNotConnected()
                 }
             )
     }
