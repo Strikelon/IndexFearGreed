@@ -144,7 +144,7 @@ class ChartFragment : MvpAppCompatFragment(), ChartFragmentView, SwipeRefreshLay
 
             graph_view.addSeries(series)
             graph_view.gridLabelRenderer.labelFormatter = DateAsXAxisLabelFormatter(activity as FragmentActivity)
-            graph_view.gridLabelRenderer.numHorizontalLabels = 16
+            graph_view.gridLabelRenderer.numHorizontalLabels = MAX_NUMBER_OF_HORIZONTAL_LABELS
             graph_view.viewport.isXAxisBoundsManual = true
 
             graph_view.viewport.setMinX(dataPointList.first().x)
