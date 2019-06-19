@@ -1,3 +1,32 @@
 <resources>
-    <string name="app_name">IndexFearGreed</string>
+    <string name="app_name">Bitcoin Fear&amp;Greed Index</string>
+
+    <!--BottomNavigationView-->
+    <string name="info_fragment_label">About App</string>
+    <string name="index_fragment_label">Show Index</string>
+    <string name="chart_fragment_label">Show Chart</string>
+
+    <!--IndexFragment-->
+    <string name="now">"Now : "</string>
+    <string name="swipe_down_to_refresh">Swipe down to refresh</string>
+    <string name="fear">Fear</string>
+    <string name="greed">Greed</string>
+    <string name="neutral">Neutral</string>
+    <string name="no_network_connection">No Network connection</string>
+
+    <!--InfoFragment-->
+    <string name="info_about_app">
+        Fear&amp;Greed index values are provided by \n https://alternative.me/crypto/fear-and-greed-index \n\n
+        This service analyze emotions and sentiments from different sources and crunch them into one simple number:
+        The Fear&amp;Greed Index for Bitcoin and other large cryptocurrencies. \n\n
+        * The information provided by this App does not constitute investment advice, financial advice,
+        trading advice, or any other sort of advice and you should not treat any of the websites content as such.
+        We does not recommend that any cryptocurrency should be bought, sold, or held by you. Do conduct your own due diligence
+        and consult your financial advisor before making any investment decisions.
+    </string>
+
+    <!--ChartFragment-->
+    <string name="scalable_chart_description">Scalable chart for last 30 days</string>
+    <string name="no_network_connection_message">Check out network connection and refresh</string>
+
 </resources>
