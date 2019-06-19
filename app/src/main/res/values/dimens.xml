@@ -9,10 +9,18 @@
     <dimen name="custom_view_arrowWidth">4dp</dimen>
     <dimen name="custom_view_fontSize">18sp</dimen>
 
-    <!--Text in IndexFragment-->
+    <!--IndexFragment-->
     <dimen name="index_fragment_text_size">24sp</dimen>
     <dimen name="index_fragment_text_layout_margin_top">16dp</dimen>
 
-    <!--Text in InfoFragment-->
+    <!--InfoFragment-->
     <dimen name="fragment_info_text_layout_margin">24dp</dimen>
+
+    <!--ChartFragment-->
+    <dimen name="fragment_chart_linear_layout_padding">16dp</dimen>
+    <dimen name="fragment_chart_chart_description_marginTop">24dp</dimen>
+    <dimen name="fragment_chart_chart_description_marginBottom">16dp</dimen>
+    <dimen name="fragment_chart_chart_description_textSize">14sp</dimen>
+    <dimen name="fragment_chart_graph_view_layout_height">400dp</dimen>
+
 </resources>

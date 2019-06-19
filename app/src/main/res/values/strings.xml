@@ -25,4 +25,8 @@
         and consult your financial advisor before making any investment decisions.
     </string>
 
+    <!--ChartFragment-->
+    <string name="scalable_chart_description">Scalable chart for last 30 days</string>
+    <string name="no_network_connection_message">Check out network connection and refresh</string>
+
 </resources>
