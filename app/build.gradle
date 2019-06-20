@@ -9,8 +9,9 @@ apply plugin: "kotlin-kapt"
 android {
     compileSdkVersion 28
     defaultConfig {
+        multiDexEnabled true
         applicationId "com.strikalov.indexfeargreed"
-        minSdkVersion 19
+        minSdkVersion 24
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -21,6 +22,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
     }
 }
 
@@ -36,6 +40,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'org.mockito:mockito-core:2.23.4'
+    testImplementation 'org.mockito:mockito-inline:2.13.0'
 
     //moxy
     implementation 'com.arello-mobile:moxy:1.5.3'
@@ -64,4 +70,6 @@ dependencies {
 
     //GraphView
     implementation 'com.jjoe64:graphview:4.2.2'
+
+    implementation 'com.android.support:multidex:1.0.3'
 }

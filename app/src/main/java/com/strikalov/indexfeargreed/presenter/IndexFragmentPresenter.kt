@@ -28,7 +28,7 @@ class IndexFragmentPresenter @Inject constructor(
     private var indexFearGreedClassification: String? = null
     private var timeStamp: String? = null
     private var date: Date? = null
-    private val dateFormat = SimpleDateFormat("dd/MM/YYYY")
+    private val dateFormat = SimpleDateFormat("dd/MM/yyyy")
 
     private var disposable: Disposable? = null
 

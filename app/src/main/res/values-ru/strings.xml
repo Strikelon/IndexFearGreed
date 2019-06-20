@@ -10,7 +10,7 @@
 
     <!--IndexFragment-->
     <string name="now">"Сейчас : "</string>
-    <string name="swipe_down_to_refresh">Кликните на картинку</string>
+    <string name="swipe_down_to_refresh">Свайп вниз</string>
     <string name="fear">Страх</string>
     <string name="greed">Жадность</string>
     <string name="neutral">Нейтрально</string>

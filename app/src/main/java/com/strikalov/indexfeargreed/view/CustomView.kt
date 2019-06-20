@@ -1,13 +1,16 @@
 package com.strikalov.indexfeargreed.view
 
+import android.annotation.TargetApi
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
 import com.strikalov.indexfeargreed.R
 import android.graphics.LinearGradient
+import android.os.Build
+import android.support.annotation.RequiresApi
 
-class CustomView(context: Context, attrs: AttributeSet): View(context, attrs) {
+class CustomView: View {
 
     companion object {
         private const val DEFAULT_FIRST_ARC_COLOR = Color.RED
@@ -52,13 +55,26 @@ class CustomView(context: Context, attrs: AttributeSet): View(context, attrs) {
     private var centerX: Float = 0f
     private var centerY: Float = 0f
 
-    init{
-        setupAttrs(context, attrs)
+    constructor(context: Context): super(context)
+
+    constructor(context: Context, attrs: AttributeSet): super(context, attrs){
+        setupAttrs(context, attrs,0,0)
     }
 
-    private fun setupAttrs(context:Context, attrs:AttributeSet){
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int): super(context, attrs, defStyleAttr){
+        setupAttrs(context, attrs,defStyleAttr,0)
+    }
 
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomView, 0, 0)
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int, defStyleRes: Int):
+            super(context, attrs, defStyleAttr, defStyleRes){
+        setupAttrs(context, attrs,defStyleAttr,defStyleRes)
+    }
+
+    private fun setupAttrs(context:Context, attrs:AttributeSet, defStyleAttr: Int, defStyleRes: Int){
+
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomView, defStyleAttr, defStyleRes)
 
         try {
 
