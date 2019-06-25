@@ -1,12 +1,15 @@
 package com.strikalov.indexfeargreed
 
 import android.app.Application
-import android.support.multidex.MultiDexApplication
 import com.strikalov.indexfeargreed.di.AppComponent
 import com.strikalov.indexfeargreed.di.AppModule
 import com.strikalov.indexfeargreed.di.DaggerAppComponent
+import com.crashlytics.android.Crashlytics
+import io.fabric.sdk.android.Fabric
 
-class App : MultiDexApplication() {
+
+
+class App : Application() {
 
     companion object {
 
@@ -18,6 +21,7 @@ class App : MultiDexApplication() {
 
     override fun onCreate() {
         super.onCreate()
+        Fabric.with(this, Crashlytics())
         appComponent = generateAppComponent()
     }
 
