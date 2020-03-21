@@ -37,4 +37,6 @@ interface ChartFragmentView : MvpView {
     @StateStrategyType(SkipStrategy::class)
     fun showToastNoNetworkConnection()
 
+    @StateStrategyType(SkipStrategy::class)
+    fun showErrorToast(error: String)
 }

@@ -158,4 +158,8 @@ class ChartFragment : MvpAppCompatFragment(), ChartFragmentView, SwipeRefreshLay
         }
 
     }
+
+    override fun showErrorToast(error: String) {
+        Toast.makeText(activity, error, Toast.LENGTH_SHORT).show()
+    }
 }

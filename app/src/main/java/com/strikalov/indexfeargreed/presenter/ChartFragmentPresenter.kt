@@ -62,7 +62,8 @@ class ChartFragmentPresenter @Inject constructor(
                 },
                 {
                     Log.i(TAG_LOG, it.toString())
-                    networkNotConnected()
+                    viewState.swipeRefreshHide()
+                    viewState.showErrorToast(it.toString())
                 }
             )
 

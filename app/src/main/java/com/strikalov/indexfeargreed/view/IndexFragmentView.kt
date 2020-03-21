@@ -25,6 +25,9 @@ interface IndexFragmentView : MvpView {
     @StateStrategyType(SkipStrategy::class)
     fun showToastNoNetworkConnection()
 
+    @StateStrategyType(SkipStrategy::class)
+    fun showErrorToast(error: String)
+
     @StateStrategyType(AddToEndSingleStrategy::class)
     fun setTextResult(indexClassification: String)
 

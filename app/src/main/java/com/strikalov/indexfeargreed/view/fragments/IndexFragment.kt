@@ -87,9 +87,11 @@ class IndexFragment : MvpAppCompatFragment(), IndexFragmentView, SwipeRefreshLay
         val networkInfo = connectivityManager?.activeNetworkInfo
 
         if(networkInfo != null && networkInfo.isConnected){
+            Log.i(TAG_LOG, "connected")
             indexFragmentPresenter.networkIsConnected()
         }else {
             indexFragmentPresenter.networkNotConnected()
+            Log.i(TAG_LOG, "disconnected")
         }
 
     }
@@ -165,5 +167,9 @@ class IndexFragment : MvpAppCompatFragment(), IndexFragmentView, SwipeRefreshLay
 
         animatorSet.start()
 
+    }
+
+    override fun showErrorToast(error: String) {
+        Toast.makeText(activity, error, Toast.LENGTH_SHORT).show()
     }
 }

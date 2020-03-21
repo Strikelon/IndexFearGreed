@@ -76,8 +76,7 @@
                 app:arrowLength="@dimen/custom_view_arrowLength"
                 app:arrowWidth="@dimen/custom_view_arrowWidth"
                 app:fontSize="@dimen/custom_view_fontSize"
-                app:indexFearGreedValue="0"
-        />
+                app:indexFearGreedValue="0" />
 
         </LinearLayout>
 
